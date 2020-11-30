@@ -13,6 +13,12 @@
 		C114B8CD257573D700709A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C114B8CB257573D700709A53 /* Main.storyboard */; };
 		C114B8CF257573D800709A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C114B8CE257573D800709A53 /* Assets.xcassets */; };
 		C114B8D2257573D800709A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C114B8D0257573D800709A53 /* LaunchScreen.storyboard */; };
+		C114B8E425757A8400709A53 /* santa-claus.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8DE25757A8300709A53 /* santa-claus.png */; };
+		C114B8E525757A8400709A53 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8DF25757A8300709A53 /* star.png */; };
+		C114B8E725757A8400709A53 /* gingerbread-man.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8E125757A8300709A53 /* gingerbread-man.png */; };
+		C114B8E825757A8400709A53 /* reindeer.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8E225757A8400709A53 /* reindeer.png */; };
+		C114B8E925757A8400709A53 /* candy-cane.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8E325757A8400709A53 /* candy-cane.png */; };
+		C114B8EC25759E9F00709A53 /* bauble.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8EB25759E9F00709A53 /* bauble.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		C114B8CE257573D800709A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C114B8D1257573D800709A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C114B8D3257573D800709A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C114B8DE25757A8300709A53 /* santa-claus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "santa-claus.png"; sourceTree = "<group>"; };
+		C114B8DF25757A8300709A53 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		C114B8E125757A8300709A53 /* gingerbread-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gingerbread-man.png"; sourceTree = "<group>"; };
+		C114B8E225757A8400709A53 /* reindeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reindeer.png; sourceTree = "<group>"; };
+		C114B8E325757A8400709A53 /* candy-cane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "candy-cane.png"; sourceTree = "<group>"; };
+		C114B8EB25759E9F00709A53 /* bauble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bauble.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				C114B8CE257573D800709A53 /* Assets.xcassets */,
 				C114B8D0257573D800709A53 /* LaunchScreen.storyboard */,
 				C114B8D3257573D800709A53 /* Info.plist */,
+				C114B8E325757A8400709A53 /* candy-cane.png */,
+				C114B8E125757A8300709A53 /* gingerbread-man.png */,
+				C114B8E225757A8400709A53 /* reindeer.png */,
+				C114B8DE25757A8300709A53 /* santa-claus.png */,
+				C114B8DF25757A8300709A53 /* star.png */,
+				C114B8EB25759E9F00709A53 /* bauble.png */,
 			);
 			path = "Match It!";
 			sourceTree = "<group>";
@@ -125,8 +143,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C114B8D2257573D800709A53 /* LaunchScreen.storyboard in Resources */,
+				C114B8E525757A8400709A53 /* star.png in Resources */,
+				C114B8E725757A8400709A53 /* gingerbread-man.png in Resources */,
 				C114B8CF257573D800709A53 /* Assets.xcassets in Resources */,
+				C114B8E925757A8400709A53 /* candy-cane.png in Resources */,
+				C114B8E425757A8400709A53 /* santa-claus.png in Resources */,
+				C114B8E825757A8400709A53 /* reindeer.png in Resources */,
 				C114B8CD257573D700709A53 /* Main.storyboard in Resources */,
+				C114B8EC25759E9F00709A53 /* bauble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
