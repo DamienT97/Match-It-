@@ -1,0 +1,6 @@
+candy-cane
+gingerbread-man
+reindeer
+santa-claus
+star
+bauble

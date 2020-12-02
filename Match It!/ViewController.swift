@@ -45,19 +45,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath!
+        let path = Bundle.main.path(forResource: "Icons", ofType: "txt")
+        let iconsFile = try! String(contentsOfFile: path!,encoding: String.Encoding.utf8)
         
-        let files = try! fm.contentsOfDirectory(atPath: path)
+        icons = iconsFile.components(separatedBy: "\n")
         
-        for file in files {
-            
-            if file.hasSuffix(".png") {
-                icons.append(file)
-                gamePositions += ["",""]
+            for _ in icons {
+                    gamePositions += ["",""]
             }
-            
-        }
         
         for case let button as UIButton in self.view.subviews {
             buttons.append(button)
@@ -168,8 +163,6 @@ class ViewController: UIViewController {
         seconds -= 1
         timeLabel.text = "Time Remaining: \(seconds)"
     }
-    
-    
-    
+   
 }
 

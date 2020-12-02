@@ -19,6 +19,7 @@
 		C114B8E825757A8400709A53 /* reindeer.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8E225757A8400709A53 /* reindeer.png */; };
 		C114B8E925757A8400709A53 /* candy-cane.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8E325757A8400709A53 /* candy-cane.png */; };
 		C114B8EC25759E9F00709A53 /* bauble.png in Resources */ = {isa = PBXBuildFile; fileRef = C114B8EB25759E9F00709A53 /* bauble.png */; };
+		C1163DEC2578228A00F5FE20 /* Icons.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1163DEB2578228A00F5FE20 /* Icons.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C114B8E225757A8400709A53 /* reindeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reindeer.png; sourceTree = "<group>"; };
 		C114B8E325757A8400709A53 /* candy-cane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "candy-cane.png"; sourceTree = "<group>"; };
 		C114B8EB25759E9F00709A53 /* bauble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bauble.png; sourceTree = "<group>"; };
+		C1163DEB2578228A00F5FE20 /* Icons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Icons.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C114B8DE25757A8300709A53 /* santa-claus.png */,
 				C114B8DF25757A8300709A53 /* star.png */,
 				C114B8EB25759E9F00709A53 /* bauble.png */,
+				C1163DEB2578228A00F5FE20 /* Icons.txt */,
 			);
 			path = "Match It!";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				C114B8E725757A8400709A53 /* gingerbread-man.png in Resources */,
 				C114B8CF257573D800709A53 /* Assets.xcassets in Resources */,
 				C114B8E925757A8400709A53 /* candy-cane.png in Resources */,
+				C1163DEC2578228A00F5FE20 /* Icons.txt in Resources */,
 				C114B8E425757A8400709A53 /* santa-claus.png in Resources */,
 				C114B8E825757A8400709A53 /* reindeer.png in Resources */,
 				C114B8CD257573D700709A53 /* Main.storyboard in Resources */,
@@ -310,6 +314,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Match It!/Match It!.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6292SPM4Q9;
 				INFOPLIST_FILE = "Match It!/Info.plist";
@@ -319,8 +325,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.dt-development.Match-It-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -329,6 +337,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Match It!/Match It!.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6292SPM4Q9;
 				INFOPLIST_FILE = "Match It!/Info.plist";
@@ -338,8 +348,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.dt-development.Match-It-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
