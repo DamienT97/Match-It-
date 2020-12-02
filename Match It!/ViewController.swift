@@ -14,6 +14,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
     @IBOutlet var button11: UIButton!
     @IBOutlet var button12: UIButton!
     
+    
+    var timer = Timer()
     var gamePositions = [String]()
     var icons = [String]()
     var buttons = [UIButton]()
@@ -34,6 +38,8 @@ class ViewController: UIViewController {
     var firstIconTapped: Int?
     var secondIconTapped: Int?
     var score = 0
+    var seconds = 60
+    var iconsMatched = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +64,7 @@ class ViewController: UIViewController {
             button.setImage(UIImage(named: "gift"), for: .normal)
         }
         
-        setupGame()
-        
+        setupGame(alert: nil)
     }
 
     @IBAction func tappedImage(_ sender: UIButton) {
@@ -79,8 +84,9 @@ class ViewController: UIViewController {
         }
         
         if gamePositions[firstIconTapped!] == gamePositions[secondIconTapped!] {
-            score += 1
-            print("Current Score: \(score)")
+            score += seconds * 10
+            scoreLabel.text = "Score: \(score)"
+            iconsMatched += 1
         } else {
              let buttonsToReset = [firstIconTapped,secondIconTapped]
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -94,7 +100,11 @@ class ViewController: UIViewController {
         iconsFlipped = 0
     }
     
-    func setupGame() {
+    @objc func setupGame(alert: UIAlertAction?) {
+        score = 0
+        seconds = 60
+        scoreLabel.text = "Score: \(score)"
+        timeLabel.text = "Time Remaining: \(seconds)"
         
         var usedPositions = [Int]()
         
@@ -125,15 +135,38 @@ class ViewController: UIViewController {
             gamePositions[secondRandomNumber] = icon
             usedPositions.append(secondRandomNumber)
             
-            
             buttons[firstRandomNumber].setImage(UIImage(named: icon), for: .disabled)
             buttons[secondRandomNumber].setImage(UIImage(named: icon), for: .disabled)
             
             
         }
+        
+        for button in buttons {
+            button.isEnabled = true
+        }
+        
         print("Positions used: \(usedPositions)")
         print("Game board: \(gamePositions)")
+        iconsMatched = 0
+        runTimer()
+    }
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
         
+        if seconds == 0 || iconsMatched == 6 {
+            timer.invalidate()
+            let ac = UIAlertController(title: "Game Over", message: "You scored: \(score)! Can you beat it?", preferredStyle: .alert)
+            ac.addAction((UIAlertAction(title: "New Game", style: .default, handler: setupGame)))
+            present(ac, animated: true)
+            return
+        }
+        
+        seconds -= 1
+        timeLabel.text = "Time Remaining: \(seconds)"
     }
     
     
